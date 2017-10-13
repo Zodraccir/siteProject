@@ -1,0 +1,142 @@
+/* Parallax Pro Green
+--------------------------------------------- */
+.parallax-pro-green .entry-title a { color: #000; }
+
+.parallax-pro-green .button,
+.parallax-pro-green .button:hover,
+.parallax-pro-green .genesis-nav-menu a,
+.parallax-pro-green .home-odd a:hover,
+.parallax-pro-green .site-footer a,
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.parallax-pro-green a:visited,
+.parallax-pro-green .entry-title a:visited,
+.parallax-pro-green .site-footer a:visited { color: #576637; }
+
+.parallax-pro-green a:focus,
+.parallax-pro-green .entry-title a:focus,
+.parallax-pro-green .site-footer a:focus { color: #000; }
+
+.parallax-pro-green a:hover,
+.parallax-pro-green .entry-title a:hover,
+.parallax-pro-green .site-footer a:hover { color: #733B90; }
+
+.parallax-pro-green a:active,
+.parallax-pro-green .entry-title a:active,
+.parallax-pro-green .site-footer a:active { color: #8D0000; }
+
+.parallax-pro-green input:hover[type="button"],
+.parallax-pro-green input:hover[type="reset"],
+.parallax-pro-green input:hover[type="submit"],
+.parallax-pro-green .archive-pagination li a:hover,
+.parallax-pro-green .archive-pagination .active a,
+.parallax-pro-green .button:hover,
+.parallax-pro-green .pricing-table a.button:hover {
+	background-color: #68923A;
+}
+
+.parallax-pro-green .footer-widgets {
+	background-color: #2B2D30;
+}
+
+.parallax-pro-green .genesis-nav-menu a:link,
+.parallax-pro-green .genesis-nav-menu a:visited,
+.parallax-pro-green .genesis-nav-menu a:focus,
+.parallax-pro-green .genesis-nav-menu a:hover,
+.parallax-pro-green .genesis-nav-menu a:active { text-decoration: none; }
+
+.parallax-pro-green .genesis-nav-menu a:link { color: #fff; }
+.parallax-pro-green .genesis-nav-menu a:visited { color: #fff; }
+.parallax-pro-green .genesis-nav-menu a:focus { color: #DF7474; }
+.parallax-pro-green .genesis-nav-menu a:hover { color: #AC77D1; }
+.parallax-pro-green .genesis-nav-menu a:active { color: #DF7474; }
+.parallax-pro-green .genesis-nav-menu .current-menu-item > a { color: #8CBD2E; }
+
+
+
+
+
+
+/*header image */
+
+.header-image .title-area {
+	padding: 0;
+}
+
+.header-image .site-title > a {
+	background-size: contain !important;
+	display: block;
+	height: 70px;
+	text-indent: -9999px;
+	max-width: 215px;
+}
+
+.header-image .site-title > a {
+		margin: 0 auto 10px;
+	}
+
+/* full width-content */
+@media only screen and (max-width: 960px) {
+    
+    
+    .header-image .site-title > a {
+		margin: 0 auto 10px;
+	}
+
+    
+    
+.full-width-content .content {
+		padding: 0;
+	}
+
+	.full-width-content img.pull-left {
+		margin-left: 0;
+	}
+
+	.full-width-content img.pull-right {
+		margin-right: 0;
+	}
+}
+.full-width-content img.pull-left {
+	float: left;
+	margin: 0 40px 40px -200px;
+}
+
+.full-width-content img.pull-right {
+	float: right;
+	margin: 0 -200px 40px 40px;
+}
+
+
+.full-width-content .content {
+	padding: 0 7em 50px;
+	width: 100%;
+}
+
+.full-width-content.parallax-home .content {
+	padding: 0;
+}
+
+@media only screen and (max-width: 1140px) {
+    .full-width-content .content {
+		padding: 0 110px;
+	}
+}
+
+
+
+/*header*/
+.header-image .title-area {
+	padding: 0;
+}
+
+.header-image .site-title > a {
+	background-size: contain !important;
+	display: block;
+	height: 70px;
+	text-indent: -9999px;
+	max-width: 215px;
+}
