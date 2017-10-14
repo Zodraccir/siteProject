@@ -3,8 +3,8 @@
 require_once 'config.php';
  
 // Define variables and initialize with empty values
-$name = $address = $salary = "";
-$name_err = $address_err = $salary_err = "";
+$creatorName = $articleText = $articleTitle = "";
+$creatorName_err = $articleText_err = $articleTitle_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
@@ -12,46 +12,46 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $id = $_POST["id"];
     
     // Validate name
-    $input_name = trim($_POST["name"]);
-    if(empty($input_name)){
-        $name_err = "Please enter a name.";
-    } elseif(!filter_var(trim($_POST["name"]), FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z'-.\s ]+$/")))){
-        $name_err = 'Please enter a valid name.';
+    $input_creatorName = trim($_POST["creatorName"]);
+    if(empty($input_creatorName)){
+        $creatorName_err = "Please enter a name.";
+    } elseif(!filter_var(trim($_POST["creatorName"]), FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z'-.\s ]+$/")))){
+        $creatorName_err = 'Please enter a valid name.';
     } else{
-        $name = $input_name;
+        $creatorName = $input_creatorName;
     }
     
     // Validate address address
-    $input_address = trim($_POST["address"]);
-    if(empty($input_address)){
-        $address_err = 'Please enter an address.';     
+    $input_articleText = trim($_POST["address"]);
+    if(empty($input_articleText)){
+        $articleText_err = 'Please enter an address.';     
     } else{
-        $address = $input_address;
+        $articleText = $input_articleText;
     }
     
     // Validate salary
-    $input_salary = trim($_POST["salary"]);
-    if(empty($input_salary)){
-        $salary_err = "Please enter the salary amount.";     
-    } elseif(!ctype_digit($input_salary)){
-        $salary_err = 'Please enter a positive integer value.';
+    $input_articleTitle = trim($_POST["salary"]);
+    if(empty($input_articleTitle)){
+        $articleTitle_err = "Please enter the salary amount.";     
+    } elseif(!ctype_digit($input_articleTitle)){
+        $articleTitle_err = 'Please enter a positive integer value.';
     } else{
-        $salary = $input_salary;
+        $articleTitle = $input_articleTitle;
     }
     
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($address_err) && empty($salary_err)){
+    if(empty($creatorName_err) && empty($articleText_err) && empty($articleTitle_err)){
         // Prepare an insert statement
-        $sql = "UPDATE employees SET name=?, address=?, salary=? WHERE id=?";
+        $sql = "UPDATE articles SET name=?, address=?, salary=? WHERE id=?";
 
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sssi", $param_name, $param_address, $param_salary, $param_id);
+            $stmt->bind_param("sssi", $param_creatorName, $param_articleText, $param_articleTitle, $param_id);
             
             // Set parameters
-            $param_name = $name;
-            $param_address = $address;
-            $param_salary = $salary;
+            $param_creatorName = $creatorName;
+            $param_articleText = $articleText;
+            $param_articleTitle = $articleTitle;
             $param_id = $id;
             
             // Attempt to execute the prepared statement
@@ -77,7 +77,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $id =  trim($_GET["id"]);
         
         // Prepare a select statement
-        $sql = "SELECT * FROM employees WHERE id = ?";
+        $sql = "SELECT * FROM articles WHERE id = ?";
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bind_param("i", $param_id);
@@ -95,9 +95,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $row = $result->fetch_array(MYSQLI_ASSOC);
                     
                     // Retrieve individual field value
-                    $name = $row["name"];
-                    $address = $row["address"];
-                    $salary = $row["salary"];
+                    $creatorName = $row["creatorName"];
+                    $articleText = $row["articleText"];
+                    $articleTitle = $row["articleTitle"];
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
                     header("location: error.php");
@@ -145,20 +145,20 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     </div>
                     <p>Please edit the input values and submit to update the record.</p>
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
-                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                        <div class="form-group <?php echo (!empty($creatorName_err)) ? 'has-error' : ''; ?>">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
-                            <span class="help-block"><?php echo $name_err;?></span>
+                            <input type="text" name="creatorName" class="form-control" value="<?php echo $creatorName; ?>">
+                            <span class="help-block"><?php echo $creatorName_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                        <div class="form-group <?php echo (!empty($articleText_err)) ? 'has-error' : ''; ?>">
                             <label>Address</label>
-                            <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
-                            <span class="help-block"><?php echo $address_err;?></span>
+                            <textarea name="address" class="form-control"><?php echo $articleText; ?></textarea>
+                            <span class="help-block"><?php echo $articleText_err;?></span>
                         </div>
-                        <div class="form-group <?php echo (!empty($salary_err)) ? 'has-error' : ''; ?>">
+                        <div class="form-group <?php echo (!empty($articleTitle_err)) ? 'has-error' : ''; ?>">
                             <label>Salary</label>
-                            <input type="text" name="salary" class="form-control" value="<?php echo $salary; ?>">
-                            <span class="help-block"><?php echo $salary_err;?></span>
+                            <input type="text" name="salary" class="form-control" value="<?php echo $articleTitle; ?>">
+                            <span class="help-block"><?php echo $articleTitle_err;?></span>
                         </div>
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
