@@ -135,16 +135,13 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Riccardo WebSite</title>
-        <meta name="description" content="We&#39;re a Sydney web design and development business that specialises in responsive websites and applications with a strong focus on usability, accessibility and standards.">
-        <meta name="robots" content="noodp,noydir">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <link rel="stylesheet" id="parallax-pro-theme-css" href="./files/style.css" type="text/css" media="all">
-
-        <link rel="stylesheet" id="simple-social-icons-font-css" href="./files/style(1).css" type="text/css" media="all">
+        <link rel="stylesheet" href="./files/style.css" type="text/css" media="all">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        <link rel="stylesheet" href="./files/font-awesome.min.css" type="text/css" media="all">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <style type="text/css">
             .wrapper{
                 width: 500px;
@@ -161,14 +158,12 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             });
         </script> 
 
-        <style type="text/css" media="screen"> .simple-social-icons ul li a, .simple-social-icons ul li a:hover, .simple-social-icons ul li a:focus { background-color: #ffffff !important; border-radius: 60px; color: #000000 !important; border: 0px #ffffff solid !important; font-size: 30px; padding: 15px; }  .simple-social-icons ul li a:hover, .simple-social-icons ul li a:focus { background-color: #f04848 !important; border-color: #ffffff !important; color: #ffffff !important; }  .simple-social-icons ul li a:focus { outline: 1px dotted #f04848 !important; }</style>
-
     </head>
-    <body class="full-width-content parallax-pro-green">
+    <body>
         <div class="site-container">
             <div id="header"></div>
 
-            <div class="site-inner">     
+            <div class="site-inner separated-content">     
 
                 <main class="content">
 

@@ -3,17 +3,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Riccardo WebSite</title>
-        <meta name="description" content="We&#39;re a Sydney web design and development business that specialises in responsive websites and applications with a strong focus on usability, accessibility and standards.">
-        <meta name="robots" content="noodp,noydir">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <link rel="stylesheet" id="parallax-pro-theme-css" href="./files/header.css" type="text/css" media="all">
+        <link rel="stylesheet" id="parallax-pro-theme-css" href="./files/style.css" type="text/css" media="all">
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="./files/font-awesome.min.css" type="text/css" media="all">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <style type="text/css">
             .wrapper{
                 width: 650px;
@@ -26,11 +25,6 @@
                 margin-right: 15px;
             }
         </style>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();   
-            });
-        </script>
 
 
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -46,18 +40,14 @@
     <body>
         <div class="site-container">
             <div id="header"></div>
-            <div class="site-inner">     
-
-                <main class="content">
-
-
+            <div class="site-inner separated-content"> 
                     <div class="wrapper">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="page-header clearfix">
-                                        <h2 class="pull-left">articles Details</h2>
-                                        <a href="create.php" class="button pull-right">Add New Employee</a>
+                                        <h2 class="pull-left">News Details</h2>
+                                        <a href="create.php" class="button pull-right">Add New Article News</a>
                                     </div>
                                     <?php
                                     // Include config file
@@ -111,14 +101,9 @@
                             </div>        
                         </div>
                     </div>
-
-
-
-                </main>
-
-
             </div>
             <div id="footer"></div>
         </div>
+        <script src="files/scrips.js"></script>
     </body>
 </html>

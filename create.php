@@ -82,16 +82,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Riccardo WebSite</title>
-        <meta name="description" content="We&#39;re a Sydney web design and development business that specialises in responsive websites and applications with a strong focus on usability, accessibility and standards.">
-        <meta name="robots" content="noodp,noydir">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-        <link rel="stylesheet" href="./files/header.css" type="text/css" media="all">
-
-       
+        <link rel="stylesheet" href="./files/style.css" type="text/css" media="all">     
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="./files/font-awesome.min.css" type="text/css" media="all">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <style type="text/css">
             .wrapper{
                 width: 500px;
@@ -115,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="site-container">
             <div id="header"></div>
 
-            <div class="site-inner">     
+            <div class="site-inner separated-content">     
 
                 <main class="content">
 
@@ -126,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     <div class="page-header">
                                         <h2>Create Record</h2>
                                     </div>
-                                    <p>Please fill this form and submit to add employee record to the database.</p>
+                                    <p>Please fill this form and submit to add a news record to the database.</p>
                                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                                         <div class="form-group <?php echo (!empty($creatorName_err)) ? 'has-error' : ''; ?>">
                                             <label>Creator Name</label>
@@ -148,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                             <input type="date" name="articleDate" class="form-control" min="2000-01-02" value="<?php echo empty($articleDate)?  date("Y-m-d"): $articleDate ; ?>"> 
                                             <span class="help-block"><?php echo $articleDate_err;?></span>
                                         </div>
-                                        <input type="submit" class="btn btn-primary" value="Submit">
+                                        <input type="submit" class="button" value="Save">
                                         <a href="protectedArea.php" class="btn btn-default">Cancel</a>
                                     </form>
                                 </div>
