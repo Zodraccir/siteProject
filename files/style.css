@@ -778,7 +778,6 @@ Site Header
 .site-header {
 	background-color: #000;
 	left: 0;
-	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 999;
@@ -793,7 +792,7 @@ Site Header
 
 .title-area {
 	float: left;
-	padding: 20px 0;
+	padding: 15px 0;
 	width: 215px;
 }
 
@@ -1884,5 +1883,5 @@ Russ new rules
 }
 
 
-.home-section-1 { background-image: url(http://maxdesign.com.au/jobs/x-assets/hands4.jpg) !important; }
-.home-section-3 { background-image: url(http://maxdesign.com.au/jobs/x-assets/iStock_000020777612Large-2.jpg) !important; }
+.home-section-1 { background-image: url(hands4.jpg) !important; }
+.home-section-3 { background-image: url(Stock_000020777612Large-2.jpg) !important; }
