@@ -52,7 +52,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     <head>
         <meta charset="UTF-8">
         <title>Riccardo WebSite</title>
-        <link rel="stylesheet" id="parallax-pro-theme-css" href="./files/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="./files/style.css" type="text/css" media="all">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
         <link rel="stylesheet" href="./files/font-awesome.min.css" type="text/css" media="all">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">

@@ -5,7 +5,7 @@
         <title>Riccardo WebSite</title>
 
 
-        <link rel="stylesheet" id="parallax-pro-theme-css" href="./files/style.css" type="text/css" media="all">
+        <link rel="stylesheet" href="./files/style.css" type="text/css" media="all">
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">

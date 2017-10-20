@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
 
     </head>
-    <body class="full-width-content parallax-pro-green">
+    <body>
         <div class="site-container">
             <div id="header"></div>
 
